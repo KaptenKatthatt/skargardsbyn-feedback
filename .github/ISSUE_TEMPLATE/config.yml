@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Öppna spelet
+    url: https://skargardsbyn.jonasolson.se/
+    about: Testversionen av Skärgårdsbyn.
+  - name: Fråga eller något privat
+    url: https://skargardsbyn.jonasolson.se/
+    about: Använd "Skriv till Jonas" i spelets inställningar. Det du skriver där syns bara för Jonas.

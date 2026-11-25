@@ -1,0 +1,57 @@
+name: Ändringsönskan
+description: Något som fungerar, men som du tycker borde vara annorlunda, eller något du saknar.
+title: "[Ändring] "
+labels: ["ändring", "ny"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tack för ditt förslag. Ett önskemål per ärende gör det lättast att följa upp.
+
+        Allt du skriver här är offentligt. Skriv inte din testkod, din mejladress eller andra personuppgifter, och se till att de inte syns i skärmbilder.
+  - type: textarea
+    id: nulage
+    attributes:
+      label: Hur är det i dag?
+      description: Vad i spelet gäller det, och vad är det som skaver?
+    validations:
+      required: true
+  - type: textarea
+    id: onskan
+    attributes:
+      label: Vad önskar du i stället?
+      description: Beskriv ändringen så konkret du kan.
+    validations:
+      required: true
+  - type: textarea
+    id: varfor
+    attributes:
+      label: Varför skulle det bli bättre?
+      description: Vad vinner du som spelare på ändringen?
+    validations:
+      required: true
+  - type: dropdown
+    id: vikt
+    attributes:
+      label: Hur viktigt är det för dig?
+      options:
+        - Mycket viktigt
+        - Ganska viktigt
+        - Vore trevligt
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Spelversion
+      description: Står under Inställningar i spelet.
+      placeholder: "0.60.3"
+    validations:
+      required: false
+  - type: textarea
+    id: skarmbild
+    attributes:
+      label: Skärmbild eller skiss
+      description: Dra hit en bild om det hjälper. Kontrollera att inga personuppgifter syns.
+    validations:
+      required: false

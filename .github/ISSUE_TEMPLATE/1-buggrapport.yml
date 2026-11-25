@@ -1,0 +1,96 @@
+name: Buggrapport
+description: Något i spelet fungerar inte som det ska.
+title: "[Bugg] "
+labels: ["bugg", "ny"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tack för att du rapporterar. En bugg per rapport gör det lättast att följa upp.
+
+        Allt du skriver här är offentligt. Skriv inte din testkod, din mejladress eller andra personuppgifter, och se till att de inte syns i skärmbilder.
+  - type: textarea
+    id: sammanfattning
+    attributes:
+      label: Vad hände?
+      description: Beskriv felet kort med egna ord.
+    validations:
+      required: true
+  - type: textarea
+    id: steg
+    attributes:
+      label: Steg för att återskapa
+      description: Vad gjorde du, steg för steg, fram till att felet visade sig?
+      placeholder: |
+        1. Öppna byn
+        2. Tryck på ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: forvantat
+    attributes:
+      label: Förväntat resultat
+      description: Vad trodde du skulle hända?
+    validations:
+      required: true
+  - type: textarea
+    id: faktiskt
+    attributes:
+      label: Faktiskt resultat
+      description: Vad hände i stället?
+    validations:
+      required: true
+  - type: dropdown
+    id: hur-ofta
+    attributes:
+      label: Hur ofta händer det?
+      options:
+        - Varje gång
+        - Ibland
+        - Det hände en gång
+        - Vet inte
+    validations:
+      required: true
+  - type: dropdown
+    id: allvarlighet
+    attributes:
+      label: Allvarlighet
+      description: Din egen bedömning.
+      options:
+        - Kritisk (spelet går inte att använda, eller framsteg försvinner)
+        - Hög (en viktig funktion fungerar inte)
+        - Medel (stör, men går att komma runt)
+        - Låg (skönhetsfel eller småsak)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Spelversion
+      description: Står under Inställningar i spelet.
+      placeholder: "0.60.3"
+    validations:
+      required: true
+  - type: input
+    id: enhet
+    attributes:
+      label: Enhet och webbläsare
+      description: Telefon eller dator, operativsystem och webbläsare. Skriv också om spelet är installerat som app eller körs i webbläsaren.
+      placeholder: "Pixel 8 Pro, Android 16, Chrome, installerad som app"
+    validations:
+      required: true
+  - type: textarea
+    id: skarmbild
+    attributes:
+      label: Skärmbild eller film
+      description: Dra hit en bild eller film om du har en. Kontrollera att inga personuppgifter syns.
+    validations:
+      required: false
+  - type: textarea
+    id: ovrigt
+    attributes:
+      label: Övrigt
+      description: Något mer som kan hjälpa, till exempel klockslag eller vad du gjorde strax innan.
+    validations:
+      required: false
